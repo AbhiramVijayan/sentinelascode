@@ -1,10 +1,10 @@
 # Scripts build pipeline
 # Copies script files to the agent and publishes an artifact with them
 
-trigger:
- paths:
-   include:
-     - Scripts/*
+# trigger:
+#  paths:
+#    include:
+#      - Scripts/*
 
 pool:
   vmImage: 'ubuntu-latest'
