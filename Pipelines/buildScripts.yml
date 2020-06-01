@@ -13,7 +13,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Scripts'
   inputs:
-    SourceFolder: $(build.SourceDirectory)'
+    SourceFolder: '$(build.SourceDirectory)'
     Contents: '/*/'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
