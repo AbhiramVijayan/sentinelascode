@@ -12,12 +12,12 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(build.SourceDirectory)'
+    SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(build.artifactstagingdirectory)'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
     publishLocation: 'pipeline'
