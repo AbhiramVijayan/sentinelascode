@@ -11,11 +11,11 @@ pool:
 
 steps:
 - task: CopyFiles@2
-  displayName: 'Copy Scripts'
   inputs:
     SourceFolder: '$(build.SourceDirectory)'
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
+
 
 - task: PublishPipelineArtifact@1
   inputs:
