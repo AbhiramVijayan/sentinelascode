@@ -13,11 +13,14 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Scripts'
   inputs:
-    SourceFolder: $(build.artifactstagingdirectory)'
+    SourceFolder: $(build.SourceDirectory)'
+    # Contents: '/*/'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
-    targetPath: Scripts
-    artifact: Scripts
+    # pathToPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: Scripts
+    targetPath: '$(build.SourceDirectory)'
+    # artifact: Scripts
