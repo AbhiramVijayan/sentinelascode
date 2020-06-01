@@ -14,7 +14,7 @@ steps:
   displayName: 'Copy Scripts'
   inputs:
     SourceFolder: '$(build.SourceDirectory)'
-    Contents: '/*/'
+    Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishPipelineArtifact@1
